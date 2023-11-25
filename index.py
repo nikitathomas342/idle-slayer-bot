@@ -2,6 +2,7 @@
 
 import pyautogui
 from actions.run import start_run_action
+from actions.ascension import start_ascension_action
 from utils import find_img_center_on_screen, click_by_point
 
 
@@ -17,7 +18,8 @@ def main():
             return
         click_by_point(inactive_window)
 
-    start_run_action(5)
+    start_ascension_action()
+    start_run_action(20)
 
     pyautogui.moveTo(initial_location)
 
